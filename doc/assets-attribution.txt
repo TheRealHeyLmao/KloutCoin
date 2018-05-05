@@ -55,5 +55,5 @@ Site: https://bitcointalk.org/index.php?topic=32273.0
 License: Public domain
 
 Klout Logo
-Designer: Evan
-License: Creative Commons Attribution 4.0 International License
+Designer: DannyKoy#7936
+License:

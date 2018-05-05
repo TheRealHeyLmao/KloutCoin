@@ -1,8 +1,8 @@
-Source: novacoin
+Source: Klout
 Section: utils
 Priority: optional
-Maintainer: Jonas Smedegaard <dr@jones.dk>
-Uploaders: Micah Anderson <micah@debian.org>
+Maintainer: rguyXD <rguyXD4Real@gmail.com>
+Uploaders: rguyXD <rguyXD4Real@gmail.com>
 Build-Depends: debhelper,
  devscripts,
  bash-completion,
@@ -19,19 +19,18 @@ Build-Depends: debhelper,
  libqt4-dev,
  libqrencode-dev
 Standards-Version: 3.9.2
-Homepage: http://www.novacoin.su/
+Homepage: 
 Vcs-Git: git://github.com/CryptoManiac/novacoin.git
-Vcs-Browser: http://github.com/CryptoManiac/novacoin
+Vcs-Browser: https://github.com/TheRealHeyLmao/KloutCoin
 
-Package: novacoind
+Package: kloutd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: peer-to-peer network based digital currency - daemon
- Novacoin is a free open source peer-to-peer electronic cash system that
- is completely decentralized, without the need for a central server or
- trusted parties.  Users hold the crypto keys to their own money and
- transact directly with each other, with the help of a P2P network to
- check for double-spending.
+Description: peer-to-peer network based digital currency - kloutd
+ Klout is a free open source project derived from Bitcoin, with
+ the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
+ Built on the foundation of Bitcoin, PPCoin and NovaCoin, innovations such as pr$
+ help further advance the field of crypto-currency.
  .
  By default connects to an IRC network to discover other peers.
  .
@@ -41,19 +40,18 @@ Description: peer-to-peer network based digital currency - daemon
  This package provides novacoind, a combined daemon and CLI tool to
  interact with the daemon.
 
-Package: novacoin-qt
+Package: klout-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Novacoin is a free open source peer-to-peer electronic cash system that
- is completely decentralized, without the need for a central server or
- trusted parties.  Users hold the crypto keys to their own money and
- transact directly with each other, with the help of a P2P network to
- check for double-spending.
+ Klout is a free open source project derived from Bitcoin, with
+ the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
+ Built on the foundation of Bitcoin, PPCoin and NovaCoin, innovations such as pr$
+ help further advance the field of crypto-currency.
  .
  By default connects to an IRC network to discover other peers.
  .
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides Novacoin-Qt, a GUI for Novacoin based on Qt.
+ This package provides Klout-Qt, a GUI for Klout based on Qt.

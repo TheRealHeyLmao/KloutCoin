@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Klout
+Comment=Klout P2P Cryptocurrency
+Comment[fr]=Klout, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Klout, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/klout-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/klout80.xpm
+MimeType=x-scheme-handler/novacoin;
+Categories=Office;

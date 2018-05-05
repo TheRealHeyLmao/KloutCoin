@@ -1,5 +1,7 @@
-Klout 0.4.4 BETA
+Klout 1.0.0
 
+Copyright (c) 2018 The New Klout Developers
+Copyright (c) 2014 Klout Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers
 Distributed under the MIT/X11 software license, see the accompanying

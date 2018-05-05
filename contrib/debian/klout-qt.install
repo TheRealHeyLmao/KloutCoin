@@ -1,0 +1,5 @@
+klout-qt usr/bin
+share/pixmaps/klout32.xpm usr/share/pixmaps
+share/pixmaps/klout80.xpm usr/share/pixmaps
+debian/klout-qt.desktop usr/share/applications
+debian/klout-qt.protocol usr/share/kde4/services/

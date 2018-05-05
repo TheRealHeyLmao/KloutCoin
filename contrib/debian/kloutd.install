@@ -1,0 +1,2 @@
+debian/bin/kloutd usr/bin
+src/kloutd usr/lib/klout

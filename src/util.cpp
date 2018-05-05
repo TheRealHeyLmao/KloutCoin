@@ -1045,7 +1045,30 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
     cachedPath[fNetSpecific]=true;
     return path;
 }
-
+void createConf()
+{
+    ofstream pConf;
+#if BOOST_FILESYSTEM_VERSION >= 3
+    pConf.open(GetConfigFile().generic_string().c_str());
+#else
+    pConf.open(GetConfigFile().string().c_str());
+#endif
+    pConf << std::string("\n#Adding Additional Nodes")
+            + "\naddnode=208.167.245.44"
+            + "\naddnode=162.212.155.140"
+            + "\naddnode=80.211.234.136:16533"
+            + "\naddnode=182.156.85.186:12310"
+            + "\naddnode=73.140.224.170:16533"
+            + "\naddnode=107.152.32.25:41676"
+            + "\naddnode=160.16.207.189:33910"
+            + "\naddnode=181.41.84.34:51327"
+            + "\naddnode=35.153.178.85:53923"
+            + "\naddnode=125.143.153.191:16533"
+            + "\naddnode=208.167.245.44:53380"
+            + "\naddnode=81.4.111.96:47854"
+            + "\naddnode=51.15.185.7";
+    pConf.close();
+}
 boost::filesystem::path GetConfigFile()
 {
     boost::filesystem::path pathConfigFile(GetArg("-conf", "klout.conf"));
@@ -1056,9 +1079,17 @@ boost::filesystem::path GetConfigFile()
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
-    boost::filesystem::ifstream streamConfig(GetConfigFile());
+    namespace fs = boost::filesystem;
+    namespace pod = boost::program_options::detail;
+
+    fs::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+    {
+        createConf();
+        new(&streamConfig) boost::filesystem::ifstream(GetConfigFile());
+        if(!streamConfig.good())
+            return;
+	  }
 
     set<string> setOptions;
     setOptions.insert("*");
